@@ -1,0 +1,22 @@
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+@media (min-width:568px) and (max-width:768px){
+
+    .bg-dark {
+        background-color: #3c3d3d!important;
+    }
+    p{font-size: larger;
+    }
+
+
+
+}
+@media (min-width:300px) and (max-width:567px){
+
+    .bg-dark {
+        background-color: #ccced0!important;
+    }
+
+}

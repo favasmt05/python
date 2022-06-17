@@ -1,0 +1,51 @@
+  .div1{
+    display: flex;
+  }
+  
+  .img1{
+        height: 100px;
+        width: 100px;
+
+        }
+
+.paragraph1{
+    font-size: 16px;
+    display: inline-block;
+}
+.div2{
+    display: flex;
+}
+
+.list1{
+    size: 24px;
+    }
+
+
+.img2{
+    border: 10px solid transparent;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px;
+    width: 600px;
+    height: 576px;
+}
+
+.img3{
+    border: 10px solid transparent;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px;
+    width: 620px;
+    height: 576px;
+}
+.head1{
+    text-align: center;
+    font-size: 16px;
+}
+.paragraph2{
+    font-size: 16px;
+    display: inline-block;
+    border-style: dotted;
+}

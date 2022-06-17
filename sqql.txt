@@ -1,0 +1,51 @@
+select number,balance from Student where balance<0 order by balance;
+select firstname,lastname,alternatePhone,countryCode from Person where  alternatePhone='';
+select firstname,lastname,alternatePhone,countryCode from Person where alternatePhone IS NULL;
+select AddressID,AddressLine1,AddressLine2,City from Person.Address where  IS NULL AND not(countryCode='CAN' OR countryCode='USA');
+select top 10 Firstname,LastName,BusinessEntityID,ModifiedDate,GETDATE() AS [ToDay],DATEDIFF(DAY,  ModifiedDate ,GETDATE())  AS DayPast from Person.Person where Firstname like '___' AND LastName Like '%a';
+select count(ProductID) FROM Purchasing.PurchaseOrderDetail WHERE EXISTS(SELECT DISTINCT ProductID FROM Purchasing.PurchaseOrderDetail);
+select top 5 Product.ProductID, SUM(UnitPrice*OrderQty) AS total_revenue
+FROM Purchasing.PurchaseOrderDetail join Production.Product on 
+PurchaseOrderDetail.ProductID = Product.ProductID WHERE Purchasing.PurchaseOrderDetail.UnitPrice>=10
+GROUP BY Product.ProductID order by total_revenue Desc;
+
+
+use SIS;
+
+select * from Student;
+
+--select * from Person;
+
+--INSERT INTO Person (number,lastName, firstName, street,city,provinceCode,countryCode,postalCode,mainPhone,alternatePhone,collegeEmail,personalEmail,birthdate)
+--VALUES ('9999998','Doe', 'Jane ', '22 SUSSEX AVE','OTTAWA','ON','CAN','H0H0H0','(555) 555-5555','','janedoe@conestogac.on.ca','janedoe@conestogac.on.ca','1995.06.18'),
+--('9999999','Doe', 'John ', '22 SUSSEX AVE','OTTAWA','ON','CAN','H0H0H0','(555) 555-5555','','Johndoe@conestogac.on.ca','Johndoe@conestogac.on.ca','1995.06.18');
+
+--INSERT INTO Student(number,isInternational,academicStatusCode,financialStatusCode,sequentialNumber,balance,localStreet,localCity,localProvinceCode,localCountryCode,localPostalCode,localPhone)
+--values('9999998','0','N','P','0','-100000','22 SUSSEX AV','OTTAWA','ON','CAN','H0H0H0','(555) 555-5555'),
+--('9999999','0','N','P','0','-100000','22 SUSSEX AV','OTTAWA','ON','CAN','H0H0H0','(555) 555-5555');
+
+
+
+use sis;
+
+--select * from Student;
+
+--select * from Person;
+
+--update Person set street='1 BLUE JAYS WAY',city='TORONTO',ProvinceCode='ON',CountryCode='CAN',PostalCode='M1M 1M1' from Person  where number='9999998' or number='9999999'; 
+
+--Person.street='1 BLUE JAYS WAY',Person.city='TORONTO',Person.provinceCode='ON',Person.countryCode='CAN',Person.postalCode='M1M 1M1'
+select * from Person where number='9999998' or number='9999999'; 
+use sis;
+
+--select * from Student;
+
+--select * from Person;
+
+--update Person set street='1 BLUE JAYS WAY',city='TORONTO',ProvinceCode='ON',CountryCode='CAN',PostalCode='M1M 1M1' from Person  where number='9999998' or number='9999999'; 
+
+--Person.street='1 BLUE JAYS WAY',Person.city='TORONTO',Person.provinceCode='ON',Person.countryCode='CAN',Person.postalCode='M1M 1M1'
+--select * from Person where number='9999998' or number='9999999'; 
+
+insert into StudentOffence(penaltyCode,notes) values('A','collaborated on exam'), GETDATE() AS [date],select Student.number from Student where Student.localcity='TORONTO';
+select * from StudentOffence;

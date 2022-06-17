@@ -1,0 +1,18 @@
+h1 {
+  color: #2490FF;
+}
+
+div .content {
+    display: inline-block;
+}
+
+div .contentTitle {
+    color: #2490FF;
+}
+
+
+#summaryMap img {
+    max-width: 30%;
+    height: auto;
+
+}
